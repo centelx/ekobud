@@ -50,7 +50,7 @@ export default function Przylacza() {
       <section className="relative bg-secondary-900 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://plus.unsplash.com/premium_photo-1661871416250-b444422e0eaf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGV4Y2F2YXRvcnxlbnwwfHwwfHx8MA%3D%3D"
+            src="https://plus.unsplash.com/premium_photo-1661871416250-b444422e0eaf?w=1920&auto=format&fit=crop&q=80&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGV4Y2F2YXRvcnxlbnwwfHwwfHx8MA%3D%3D"
             alt="Przyłącza"
             className="w-full h-full object-cover opacity-90"
           />
