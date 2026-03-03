@@ -122,11 +122,10 @@ export default function Oczyszczalnie() {
           {brands.map((brand, i) => (
             <div
               key={i}
-              className={`rounded-2xl p-8 border ${
-                brand.highlight
+              className={`rounded-2xl p-8 border ${brand.highlight
                   ? 'border-primary-200 bg-primary-50/50 ring-1 ring-primary-100'
                   : 'border-secondary-100 bg-white'
-              }`}
+                }`}
             >
               <div className="flex items-center gap-3 mb-4">
                 {brand.highlight && (
@@ -175,7 +174,11 @@ export default function Oczyszczalnie() {
         </div>
       </SectionWrapper>
 
-      <Testimonials />
+      <Testimonials reviews={[
+        { name: 'Anna W.', text: 'Oczyszczalnia działa bez zarzutu. Pan Paweł doradził najlepsze rozwiązanie i pomógł z całą papierologią zgłoszeniową.' },
+        { name: 'Michał S.', text: 'Super inwestycja, w końcu koniec z wywozem szamba. Ekipa zamontowała wszystko sprawnie i czysto.' },
+        { name: 'Magdalena T.', text: 'Pełen profesjonalizm od wyceny po montaż oczyszczalni. Teren po wykopach ładnie wyrównany.' },
+      ]} />
 
       <SectionWrapper>
         <div className="text-center">

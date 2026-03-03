@@ -10,13 +10,8 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg leading-none">E</span>
-              </div>
-              <span className="text-xl font-bold text-white">
-                Eko<span className="text-primary-400">Bud</span>
-              </span>
+            <Link to="/" className="flex items-center mb-4">
+              <img src="/logo2_cmyk.png" alt="EkoBud" className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm leading-relaxed mb-4">
               Eko Bud Paweł Sergiejuk

@@ -161,7 +161,11 @@ export default function Przylacza() {
         </div>
       </SectionWrapper>
 
-      <Testimonials />
+      <Testimonials reviews={[
+        { name: 'Tomasz S.', text: 'Kompleksowa obsługa przyłącza gazowego. Wszystko od projektu po odbiory załatwione bardzo sprawnie.' },
+        { name: 'Kamil R.', text: 'Bezproblemowo wykonane przyłącze wody wraz ze studnią wodomierzową. Zdejmują cały ciężar formalności z barków klienta.' },
+        { name: 'Ewa L.', text: 'Świetny kontakt i terminowość. Podłączenie do sieci wod-kan przebiegło błyskawicznie. Polecam.' },
+      ]} />
 
       <SectionWrapper>
         <div className="text-center">

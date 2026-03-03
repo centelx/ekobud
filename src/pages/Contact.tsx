@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 import Button from '../components/ui/Button';
 import SectionWrapper from '../components/ui/SectionWrapper';
 
@@ -23,12 +23,7 @@ const contactInfo = [
     value: 'Nowa 3, 07-200 Natalin',
     href: null,
   },
-  {
-    icon: Clock,
-    label: 'Godziny pracy',
-    value: 'Pon\u2013Pt: 7:00\u201317:00, Sob: 8:00\u201314:00',
-    href: null,
-  },
+
 ];
 
 export default function Contact() {

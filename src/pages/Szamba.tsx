@@ -84,9 +84,8 @@ export default function Szamba() {
               {tanks.map((t, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-secondary-100 ${
-                    i % 2 === 0 ? 'bg-white' : 'bg-secondary-50/50'
-                  }`}
+                  className={`border-b border-secondary-100 ${i % 2 === 0 ? 'bg-white' : 'bg-secondary-50/50'
+                    }`}
                 >
                   <td className="px-6 py-4 font-semibold text-secondary-800">{t.vol}</td>
                   <td className="px-6 py-4 text-secondary-600">{t.w}</td>
@@ -144,7 +143,11 @@ export default function Szamba() {
         </div>
       </SectionWrapper>
 
-      <Testimonials />
+      <Testimonials reviews={[
+        { name: 'Jan K.', text: 'Szybki montaż szamba, zero problemów z dojazdem na trudną działkę. Panowie zostawili po sobie idealny porządek.' },
+        { name: 'Piotr M.', text: 'Szambo betonowe 10m3 zamontowane w kilka godzin. Solidna robota i świetny kontakt z panem Pawłem.' },
+        { name: 'Krzysztof W.', text: 'Polecam! Bardzo solidne zbiorniki, doradztwo przy wyborze pojemności i wymiarów było bezbłędne.' },
+      ]} />
 
       <SectionWrapper>
         <div className="text-center">

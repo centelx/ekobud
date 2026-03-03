@@ -1,25 +1,16 @@
 import { Star } from 'lucide-react';
 import SectionWrapper from './ui/SectionWrapper';
 
-const reviews = [
-  {
-    name: 'Marek K.',
-    location: 'Wyszków',
-    text: 'Bardzo profesjonalne podejście od początku do końca. Panowie przyjechali punktualnie, zamontowali szambo w kilka godzin. Polecam z czystym sumieniem!',
-  },
-  {
-    name: 'Anna W.',
-    location: 'Pułtusk',
-    text: 'Pan Paweł doradził najlepsze rozwiązanie dla naszej działki. Oczyszczalnia działa bez zarzutu od ponad roku. Pomógł też z całą papierkową robotą.',
-  },
-  {
-    name: 'Tomasz S.',
-    location: 'Radzymin',
-    text: 'Kompleksowa obsługa przyłącza gazowego. Wszystko od projektu po odbiory załatwione sprawnie. Teren po wykopach zostawiony w idealnym porządku.',
-  },
-];
+interface Review {
+  name: string;
+  text: string;
+}
 
-export default function Testimonials() {
+interface TestimonialsProps {
+  reviews: Review[];
+}
+
+export default function Testimonials({ reviews }: TestimonialsProps) {
   return (
     <SectionWrapper bg="gray">
       <div className="text-center mb-12">
@@ -50,7 +41,6 @@ export default function Testimonials() {
             </p>
             <div>
               <p className="font-semibold text-secondary-800 text-sm">{review.name}</p>
-              <p className="text-secondary-400 text-xs">{review.location}</p>
             </div>
           </div>
         ))}

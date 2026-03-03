@@ -18,13 +18,8 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-secondary-100">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
-            <div className="w-9 h-9 bg-primary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg leading-none">E</span>
-            </div>
-            <span className="text-xl font-bold text-secondary-800">
-              Eko<span className="text-primary-600">Bud</span>
-            </span>
+          <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+            <img src="/logo2_cmyk.png" alt="EkoBud" className="h-12 lg:h-14 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-1">
@@ -32,11 +27,10 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === link.to
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${pathname === link.to
                     ? 'text-primary-600 bg-primary-50'
                     : 'text-secondary-600 hover:text-primary-600 hover:bg-secondary-50'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -68,11 +62,10 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  pathname === link.to
+                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${pathname === link.to
                     ? 'text-primary-600 bg-primary-50'
                     : 'text-secondary-600 hover:text-primary-600 hover:bg-secondary-50'
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
