@@ -52,7 +52,7 @@ export default function Przylacza() {
           <img
             src="https://images.unsplash.com/photo-1504307651254-35680f356f12?auto=format&fit=crop&w=1920&q=80"
             alt="Przyłącza"
-            className="w-full h-full object-cover opacity-20"
+            className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-secondary-900/80 to-secondary-900" />
         </div>

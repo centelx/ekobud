@@ -76,7 +76,7 @@ export default function Home() {
           <img
             src="https://images.unsplash.com/photo-1646324554833-f0b6a479fa5d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Budowa domu"
-            className="w-full h-full object-cover opacity-30"
+            className="w-full h-full object-cover opacity-60"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary-900 via-secondary-900/80 to-secondary-900/40" />
         </div>
@@ -86,20 +86,20 @@ export default function Home() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Niezawodne instalacje dla Twojego domu i działki.{' '}
               <span className="text-primary-400">Kompleksowe wykonanie od projektu po montaż.</span>
             </h1>
-            <p className="text-lg text-secondary-300 leading-relaxed mb-10 max-w-2xl">
+            <p className="text-lg text-secondary-300 leading-relaxed mb-10 max-w-2xl mx-auto">
               Specjalizujemy się w sprzedaży i montażu przydomowych oczyszczalni ścieków,
               szamb betonowych oraz kompleksowym wykonawstwie przyłączy wodno-kanalizacyjnych
               i gazowych. Działamy na terenie Wyszkowa i w promieniu 75 kilometrów.
               Gwarantujemy najwyższą jakość, różnorodność produktów i wsparcie w załatwieniu
               wszelkich formalności.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/szamba">
                 <Button>
                   Poznaj naszą ofertę
