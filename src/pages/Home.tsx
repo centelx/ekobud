@@ -186,7 +186,7 @@ export default function Home() {
             ))}
           </div>
           <Link to="/kontakt">
-            <Button className="bg-white text-primary-700 hover:bg-primary-50">
+            <Button variant="outline" className="bg-white !text-primary-700 !border-white hover:bg-primary-50">
               Zapytaj o swoją lokalizację
               <ArrowRight className="w-4 h-4" />
             </Button>
@@ -221,7 +221,7 @@ export default function Home() {
           </div>
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80"
+              src="https://plus.unsplash.com/premium_photo-1664477100909-72e25a69f553?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Prace budowlane"
               loading="lazy"
               className="w-full h-80 lg:h-96 object-cover"

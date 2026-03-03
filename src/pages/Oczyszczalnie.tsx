@@ -81,7 +81,7 @@ export default function Oczyszczalnie() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-3xl mx-auto text-center"
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               Przydomowe Oczyszczalnie Ścieków{' '}
