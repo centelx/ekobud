@@ -67,7 +67,7 @@ export default function Przylacza() {
               Profesjonalne Przyłącza Wodno-Kanalizacyjne i Gazowe
             </h1>
             <p className="text-lg text-secondary-300 leading-relaxed">
-              Zajmujemy się kompleksową realizacją przyłączy \u2013 od uzyskania warunków
+              Zajmujemy się kompleksową realizacją przyłączy – od uzyskania warunków
               technicznych, przez projekt, aż po wykonanie i odbiory. Zdejmujemy z Twoich
               barków cały ciężar papierologii.
             </p>
@@ -91,7 +91,7 @@ export default function Przylacza() {
               key={i}
               className="bg-white rounded-2xl p-6 border border-secondary-100 hover:border-primary-200 transition-colors"
             >
-              <span className="text-4xl font-bold text-primary-100 block mb-3">
+              <span className="text-4xl font-bold text-primary-600 block mb-3">
                 {step.num}
               </span>
               <h3 className="text-lg font-bold text-secondary-800 mb-2">{step.title}</h3>
@@ -173,7 +173,7 @@ export default function Przylacza() {
             Potrzebujesz przyłącza?
           </h2>
           <p className="text-secondary-500 max-w-xl mx-auto mb-8">
-            Zadzwoń lub napisz \u2013 pomożemy Ci przejść przez cały proces od A do Z.
+            Zadzwoń lub napisz – pomożemy Ci przejść przez cały proces od A do Z.
           </p>
           <Link to="/kontakt">
             <Button>

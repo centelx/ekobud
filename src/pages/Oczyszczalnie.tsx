@@ -86,7 +86,7 @@ export default function Oczyszczalnie() {
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               Przydomowe Oczyszczalnie Ścieków{' '}
               <span className="text-primary-400">
-                \u2013 ekologia i oszczędność na Twojej działce
+                – ekologia i oszczędność na Twojej działce
               </span>
             </h1>
             <p className="text-lg text-secondary-300 leading-relaxed">
@@ -123,8 +123,8 @@ export default function Oczyszczalnie() {
             <div
               key={i}
               className={`rounded-2xl p-8 border ${brand.highlight
-                  ? 'border-primary-200 bg-primary-50/50 ring-1 ring-primary-100'
-                  : 'border-secondary-100 bg-white'
+                ? 'border-primary-200 bg-primary-50/50 ring-1 ring-primary-100'
+                : 'border-secondary-100 bg-white'
                 }`}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -186,7 +186,7 @@ export default function Oczyszczalnie() {
             Chcesz poznać szczegóły?
           </h2>
           <p className="text-secondary-500 max-w-xl mx-auto mb-8">
-            Zadzwoń lub napisz \u2013 doradzimy najlepszą oczyszczalnię dopasowaną do
+            Zadzwoń lub napisz – doradzimy najlepszą oczyszczalnię dopasowaną do
             Twojej działki i budżetu.
           </p>
           <Link to="/kontakt">

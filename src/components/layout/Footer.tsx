@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
-import ContactFormSmall from '../ContactFormSmall';
+
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary-900 text-secondary-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           <div>
             <Link to="/" className="flex items-center mb-4">
               <img src="/logo2_cmyk.png" alt="EkoBud" className="h-12 w-auto brightness-0 invert" />
@@ -84,10 +84,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h3 className="text-white font-semibold mb-4">Szybki kontakt</h3>
-            <ContactFormSmall />
-          </div>
+
         </div>
       </div>
 

@@ -52,7 +52,7 @@ export default function Szamba() {
           >
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-6">
               Szamba betonowe, piwnice ogrodowe i kanały samochodowe{' '}
-              <span className="text-primary-400">\u2013 trwałość na lata</span>
+              <span className="text-primary-400">– trwałość na lata</span>
             </h1>
             <p className="text-lg text-secondary-300 leading-relaxed">
               Brak dostępu do miejskiej sieci kanalizacyjnej to nie problem. Nasze szamba
@@ -136,7 +136,7 @@ export default function Szamba() {
               </h3>
               <p className="text-secondary-500 text-sm leading-relaxed">
                 Betonowe piwniczki ogrodowe z otworem na drzwi. Idealne do przechowywania
-                przetworów i warzyw \u2013 utrzymują stałą, niską temperaturę przez cały rok.
+                przetworów i warzyw – utrzymują stałą, niską temperaturę przez cały rok.
               </p>
             </div>
           </div>

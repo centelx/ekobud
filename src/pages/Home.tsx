@@ -38,7 +38,7 @@ const strengths = [
   {
     icon: ClipboardCheck,
     title: 'Kompleksowość wykonania',
-    text: 'Nie musisz szukać wielu podwykonawców. Zajmujemy się wszystkim \u2013 od pozyskania warunków przyłączeniowych, poprzez projekt, doradztwo, aż po montaż, podłączenie i ostateczne odbiory.',
+    text: 'Nie musisz szukać wielu podwykonawców. Zajmujemy się wszystkim – od pozyskania warunków przyłączeniowych, poprzez projekt, doradztwo, aż po montaż, podłączenie i ostateczne odbiory.',
   },
   {
     icon: Package,
