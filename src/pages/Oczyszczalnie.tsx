@@ -70,7 +70,7 @@ export default function Oczyszczalnie() {
       <section className="relative bg-secondary-900 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1920&q=80"
+            src="https://plus.unsplash.com/premium_photo-1733266883899-29971ddbe5e3?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Ekologiczna oczyszczalnia"
             className="w-full h-full object-cover opacity-90"
           />

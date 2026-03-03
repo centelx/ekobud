@@ -37,7 +37,7 @@ export default function Szamba() {
       <section className="relative bg-secondary-900 pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1920&q=80"
+            src="https://plus.unsplash.com/premium_photo-1682144326897-4a7149b991f5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8c2VwdGljJTIwdGFua3xlbnwwfHwwfHx8MA%3D%3D"
             alt="Szambo betonowe"
             className="w-full h-full object-cover opacity-90"
           />
