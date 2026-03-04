@@ -57,14 +57,6 @@ export default function Contact() {
   return (
     <>
       <section className="relative bg-secondary-900 pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&auto=format&fit=crop&q=80"
-            alt="Kontakt"
-            className="w-full h-full object-cover opacity-90"
-          />
-          <div className="absolute inset-0 bg-secondary-900/50" />
-        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

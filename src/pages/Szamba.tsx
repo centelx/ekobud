@@ -1,9 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, CheckCircle2, X, ChevronLeft, ChevronRight, Camera } from 'lucide-react';
 import Button from '../components/ui/Button';
 import SectionWrapper from '../components/ui/SectionWrapper';
 import Testimonials from '../components/Testimonials';
+
+const galleryImages = Array.from({ length: 6 }, (_, i) => ({
+  src: `/szamba_${i + 1}.jpg`,
+  alt: `Realizacja szamba ${i + 1}`,
+}));
 
 const tanks = [
   { vol: '4 m\u00B3', w: '2,00 m', l: '2,50 m', h: '1,10 m' },
@@ -32,6 +38,13 @@ const channels = [
 ];
 
 export default function Szamba() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const openLightbox = (i: number) => setLightbox(i);
+  const closeLightbox = () => setLightbox(null);
+  const prevImage = () => setLightbox((prev) => (prev !== null ? (prev - 1 + galleryImages.length) % galleryImages.length : null));
+  const nextImage = () => setLightbox((prev) => (prev !== null ? (prev + 1) % galleryImages.length : null));
+
   return (
     <>
       <section className="relative bg-secondary-900 pt-32 pb-20 overflow-hidden">
@@ -142,6 +155,97 @@ export default function Szamba() {
           </div>
         </div>
       </SectionWrapper>
+
+      {/* Galeria */}
+      <SectionWrapper>
+        <div className="flex items-center gap-3 mb-8">
+          <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
+            <Camera className="w-6 h-6 text-primary-600" />
+          </div>
+          <h2 className="text-3xl font-bold text-secondary-800">
+            Galeria realizacji
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {galleryImages.map((img, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+              className="relative group cursor-pointer rounded-2xl overflow-hidden aspect-[4/3]"
+              onClick={() => openLightbox(i)}
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-secondary-900/0 group-hover:bg-secondary-900/30 transition-colors duration-300 flex items-center justify-center">
+                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium text-sm">
+                  Powiększ
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={closeLightbox}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') closeLightbox();
+              if (e.key === 'ArrowLeft') prevImage();
+              if (e.key === 'ArrowRight') nextImage();
+            }}
+            tabIndex={0}
+          >
+            <button
+              onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition-colors z-10"
+            >
+              <X className="w-8 h-8" />
+            </button>
+
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="absolute left-4 text-white/70 hover:text-white transition-colors z-10"
+            >
+              <ChevronLeft className="w-10 h-10" />
+            </button>
+
+            <motion.img
+              key={lightbox}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              src={galleryImages[lightbox].src}
+              alt={galleryImages[lightbox].alt}
+              className="max-w-full max-h-[85vh] object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="absolute right-4 text-white/70 hover:text-white transition-colors z-10"
+            >
+              <ChevronRight className="w-10 h-10" />
+            </button>
+
+            <div className="absolute bottom-4 text-white/60 text-sm">
+              {lightbox + 1} / {galleryImages.length}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <Testimonials reviews={[
         { name: 'Jan K.', text: 'Szybki montaż szamba, zero problemów z dojazdem na trudną działkę. Panowie zostawili po sobie idealny porządek.' },
